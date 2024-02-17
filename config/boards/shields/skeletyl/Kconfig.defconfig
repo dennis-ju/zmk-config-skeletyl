@@ -1,0 +1,16 @@
+config ZMK_USB_LOGGING
+    default y
+
+config ZMK_SPLIT
+    default y
+
+if SHIELD_SKELETYL_CENTRAL
+
+config ZMK_KEYBOARD_NAME
+    default "Skeletyl"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
