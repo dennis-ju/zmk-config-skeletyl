@@ -44,12 +44,30 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        alpha {
             bindings = <
 &kp PERIOD  &kp W       &kp F       &kp G        &none        &none         &kp COMMA    &kp UNDERSCORE  &kp J       &kp B
 &kp S       &hm LALT C  &hm LGUI N  &hm LCTRL T  &none        &none         &hm LCTRL A  &hm LGUI E      &hm LALT I  &kp H
 &none       &kp P       &kp L       &kp D        &none        &none         &kp U        &kp O           &kp Y       &none
                         &none       &kp R        &lt 0 TAB    &lt 0 LSHIFT  &sk LSHFT    &none
+            >;
+        };
+
+        sym1 {
+            bindings = <
+&kp EXCL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EQUAL  &trans     &trans             &kp SEMICOLON  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION
+&kp F     &kp A           &kp Q            &kp K      &trans     &trans             &kp X          &kp Z                 &kp A                  &kp O
+&trans    &kp PLUS        &kp ASTERISK     &kp MINUS  &trans     &trans             &kp SLASH      &kp LESS_THAN         &kp GREATER_THAN       &trans
+                          &trans           &kp R      &kp SQT    &kp DOUBLE_QUOTES  &sl 2          &trans
+            >;
+        };
+
+        sym2 {
+            bindings = <
+&trans     &kp COLON  &kp CARET      &kp PIPE    &trans       &trans  &kp TILDE  &kp LBKT   &kp RBKT   &kp QMARK
+&kp LS(F)  &kp LS(A)  &kp LS(Q)      &kp LS(K)   &trans       &trans  &kp LS(X)  &kp LS(Z)  &kp LS(A)  &kp LS(O)
+&trans     &kp HASH   &kp AMPERSAND  &kp DOLLAR  &trans       &trans  &kp BSLH   &kp AT     &trans     &trans
+                      &trans         &trans      &kp GRAVE    &trans  &trans     &trans
             >;
         };
     };
