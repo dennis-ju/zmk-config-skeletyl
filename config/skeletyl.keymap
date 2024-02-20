@@ -65,7 +65,7 @@
         sym2 {
             bindings = <
 &trans     &kp COLON  &kp CARET       &kp PIPE         &trans       &trans  &kp TILDE  &kp LBKT   &kp RBKT   &kp QMARK
-&kp LS(F)  &kp LS(A)  &hm LGUI LS(Q)  &hm LCTRL LS(K)  &trans       &trans  &kp LS(X)  &kp LS(Z)  &kp LS(A)  &kp LS(O)
+&kp LS(F)  &hm LALT LS(A)  &hm LGUI LS(Q)  &hm LCTRL LS(K)  &trans       &trans  &hm LCTRL LS(X)  &hm LCTRL LS(Z)  &hm LALT LS(A)  &kp LS(O)
 &trans     &kp HASH   &kp AMPERSAND   &kp DOLLAR       &trans       &trans  &kp BSLH   &kp AT     &trans     &trans
                       &trans          &trans           &kp GRAVE    &trans  &trans     &trans
             >;
@@ -74,7 +74,7 @@
         num {
             bindings = <
 &trans     &kp BACKSPACE  &kp N5        &kp N6     &trans    &trans     &kp N7     &kp N8   &kp N9  &trans
-&kp LC(A)  &kp LC(Z)      &mt LCTRL N0  &kp N1     &trans    &trans     &kp N2     &kp N3   &kp N4  &trans
+&kp LC(A)  &hm LALT LC(Z)      &hm LGUI N0  &hm LCTRL N1     &trans    &trans     &hm LCTRL N2     &hm LGUI N3   &hm LALT N4  &trans
 &trans     &kp LC(X)      &kp LC(C)     &kp LC(V)  &trans    &trans     &kp COMMA  &kp DOT  &trans  &trans
                           &trans        &trans     &trans    &kp LSHFT  &kp LGUI   &trans
             >;
@@ -83,7 +83,7 @@
         sys {
             bindings = <
 &trans  &trans   &kp DEL    &kp HOME  &trans    &trans  &trans    &kp BACKSPACE  &trans     &trans
-&trans  &kp TAB  &kp ENTER  &kp ESC   &trans    &trans  &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT
+&trans  &hm LALT TAB  &hm LGUI ENTER  &hm LCTRL ESC   &trans    &trans  &hm LCTRL LEFT  &hm LGUI DOWN       &hm LALT UP     &kp RIGHT
 &trans  &trans   &trans     &kp END   &trans    &trans  &trans    &kp PG_DN      &kp PG_UP  &trans
                  &trans     &kp LGUI  &mo 5     &trans  &trans    &trans
             >;
