@@ -6,10 +6,6 @@
 
 #include "skeletyl.dtsi"
 
-&default_transform {
-	col-offset = <6>;
-};
-
 &skeletyl_transform {
 	col-offset = <6>;
 };
