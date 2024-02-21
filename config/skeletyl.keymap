@@ -104,10 +104,10 @@
 
         sys {
             bindings = <
-&trans  &trans        &kp DEL         &kp HOME       &trans    &trans  &trans          &kp BACKSPACE  &trans       &trans
-&trans  &hm LALT TAB  &hm LGUI ENTER  &hm LCTRL ESC  &trans    &trans  &hm LCTRL LEFT  &hm LGUI DOWN  &hm LALT UP  &kp RIGHT
-&trans  &trans        &trans          &kp END        &trans    &trans  &trans          &kp PG_DN      &kp PG_UP    &trans
-                      &trans          &kp LGUI       &mo 5     &trans  &trans          &trans
+&trans  &trans           &kp DEL         &kp HOME       &trans    &trans  &trans          &kp BACKSPACE  &trans       &trans
+&trans  &hm LALT TAB     &hm LGUI ENTER  &hm LCTRL ESC  &trans    &trans  &hm LCTRL LEFT  &hm LGUI DOWN  &hm LALT UP  &kp RIGHT
+&trans  &kp LC(LS(TAB))  &kp LC(TAB)     &kp END        &trans    &trans  &trans          &kp PG_DN      &kp PG_UP    &trans
+                         &trans          &kp LGUI       &mo 5     &trans  &trans          &trans
             >;
         };
 
