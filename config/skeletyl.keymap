@@ -68,10 +68,10 @@
 
         alpha {
             bindings = <
-&kp SV_DOT  &kp W       &kp F       &kp G        &none    &none      &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
-&kp S       &hm LALT C  &hm LGUI N  &hm LCTRL T  &none    &none      &hm LCTRL A          &hm LGUI E                &hm LALT I  &kp H
-&none       &kp P       &kp L       &kp D        &none    &none      &kp U                &kp O                     &kp Y       &none
-                        &none       &kp R        &mo 1    &sk LSHFT  &lt 4 SPACE          &none
+&kp SV_DOT  &kp W       &kp F       &kp G        &none          &none      &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
+&kp S       &hm LALT C  &hm LGUI N  &hm LCTRL T  &none          &none      &hm LCTRL A          &hm LGUI E                &hm LALT I  &kp H
+&none       &kp P       &kp L       &kp D        &none          &none      &kp U                &kp O                     &kp Y       &none
+                        &none       &lt 1 R      &key_repeat    &sk LSHFT  &lt 4 SPACE          &none
             >;
         };
 
@@ -79,17 +79,17 @@
             bindings = <
 &kp SV_EXCL  &kp SV_LBRC         &kp SV_RBRC  &kp SV_EQUAL  &trans    &trans      &kp SV_SEMI  &kp SV_LPAR  &kp SV_RPAR           &kp SV_QMARK
 &kp F        &hm LALT SV_A_RING  &hm LGUI Q   &hm LCTRL K   &trans    &trans      &hm LCTRL X  &hm LGUI Z   &hm LALT SV_A_UMLAUT  &kp SV_O_UMLAUT
-&trans       &kp SV_PLUS         &kp SV_STAR  &kp SV_MINUS  &trans    &trans      &kp SV_FSLH  &kp SV_LT    &kp SV_GT             &trans
-                                 &trans       &to 0         &trans    &kp SV_DQT  &mo 2        &trans
+&trans       &kp V               &kp SV_STAR  &kp SV_MINUS  &trans    &trans      &kp SV_FSLH  &kp SV_LT    &kp SV_GT             &trans
+                                 &trans       &trans        &trans    &kp SV_DQT  &mo 2        &trans
             >;
         };
 
         sym2 {
             bindings = <
-&kp SV_PRCNT  &kp SV_COLON    &kp SV_CARET    &kp SV_PIPE      &trans       &trans  &tide_macro      &kp SV_LBKT      &kp SV_RBKT     &kp SV_QMARK
-&kp LS(F)     &hm LALT LS(A)  &hm LGUI LS(Q)  &hm LCTRL LS(K)  &trans       &trans  &hm LCTRL LS(X)  &hm LCTRL LS(Z)  &hm LALT LS(A)  &kp LS(O)
-&trans        &kp SV_HASH     &kp SV_AMPS     &kp SV_DLLR      &trans       &trans  &kp SV_BSLH      &kp SV_AT        &kp SV_SQT      &trans
-                              &trans          &trans           &kp GRAVE    &trans  &trans           &trans
+&kp SV_PRCNT  &kp SV_COLON    &kp SV_CARET    &kp SV_PIPE      &trans         &trans        &tide_macro      &kp SV_LBKT      &kp SV_RBKT     &kp SV_QMARK
+&kp LS(F)     &hm LALT LS(A)  &hm LGUI LS(Q)  &hm LCTRL LS(K)  &trans         &trans        &hm LCTRL LS(X)  &hm LCTRL LS(Z)  &hm LALT LS(A)  &kp LS(O)
+&trans        &kp LS(V)       &kp SV_AMPS     &kp SV_DLLR      &trans         &trans        &kp SV_BSLH      &kp SV_AT        &kp SV_SQT      &trans
+                              &trans          &kp PLUS         &kp SV_HASH    &kp SV_GRAVE  &trans           &trans
             >;
         };
 
