@@ -77,10 +77,10 @@
 
         sym1 {
             bindings = <
-&kp SV_EXCL  &kp SV_LBRC         &kp SV_RBRC  &kp SV_EQUAL  &trans     &trans      &kp SV_SEMI  &kp SV_LPAR  &kp SV_RPAR           &kp SV_QMARK
-&kp F        &hm LALT SV_A_RING  &hm LGUI Q   &hm LCTRL K   &trans     &trans      &hm LCTRL X  &hm LGUI Z   &hm LALT SV_A_UMLAUT  &kp SV_O_UMLAUT
-&trans       &kp SV_PLUS         &kp SV_STAR  &kp SV_MINUS  &trans     &trans      &kp SV_FSLH  &kp SV_LT    &kp SV_GT             &trans
-                                 &trans       &to 0         &kp SQT    &kp SV_DQT  &mo 2        &trans
+&kp SV_EXCL  &kp SV_LBRC         &kp SV_RBRC  &kp SV_EQUAL  &trans    &trans      &kp SV_SEMI  &kp SV_LPAR  &kp SV_RPAR           &kp SV_QMARK
+&kp F        &hm LALT SV_A_RING  &hm LGUI Q   &hm LCTRL K   &trans    &trans      &hm LCTRL X  &hm LGUI Z   &hm LALT SV_A_UMLAUT  &kp SV_O_UMLAUT
+&trans       &kp SV_PLUS         &kp SV_STAR  &kp SV_MINUS  &trans    &trans      &kp SV_FSLH  &kp SV_LT    &kp SV_GT             &trans
+                                 &trans       &to 0         &trans    &kp SV_DQT  &mo 2        &trans
             >;
         };
 
