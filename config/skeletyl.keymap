@@ -54,6 +54,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
         };
+
+        htm: htm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTM";
+            bindings = <&to>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -62,6 +71,8 @@
             #binding-cells = <0>;
             bindings = <&kp ESCAPE &kp COLON &kp W &kp Q &kp ENTER>;
             label = "VIM_SAVE_EXIT";
+            wait-ms = <10>;
+            tap-ms = <10>;
         };
 
         tide_macro: tide_macro {
@@ -69,6 +80,20 @@
             #binding-cells = <0>;
             bindings = <&kp SV_TILDE &kp SPACE>;
             label = "TIDE_MACRO";
+        };
+
+        to_sym1: to_sym1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 1>;
+            label = "TO_SYM1";
+        };
+
+        to_sym2: to_sym2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 2>;
+            label = "TO_SYM2";
         };
     };
 
@@ -87,9 +112,9 @@
         sym1 {
             bindings = <
 &kp SV_EXCL  &kp SV_LBRC         &kp SV_RBRC  &kp SV_EQUAL  &trans    &trans      &kp SV_SEMI  &kp SV_LPAR  &kp SV_RPAR           &kp SV_QMARK
-&kp F        &hm LALT SV_A_RING  &hm LGUI Q   &hm LCTRL K   &trans    &trans      &hm LCTRL X  &hm LGUI Z   &hm LALT SV_A_UMLAUT  &kp SV_O_UMLAUT
+&kp F        &hm LALT SV_A_RING  &hm LGUI Q   &hm LCTRL K   &trans    &trans      &kp X        &hm LGUI Z   &hm LALT SV_A_UMLAUT  &kp SV_O_UMLAUT
 &trans       &kp V               &kp SV_STAR  &kp SV_MINUS  &trans    &trans      &kp SV_FSLH  &kp SV_LT    &kp SV_GT             &trans
-                                 &trans       &trans        &trans    &kp SV_DQT  &mo 2        &trans
+                                 &trans       &trans        &trans    &kp SV_DQT  &to_sym2     &trans
             >;
         };
 
@@ -98,7 +123,7 @@
 &kp SV_PRCNT  &kp SV_COLON    &kp SV_CARET    &kp SV_PIPE      &trans         &trans        &tide_macro      &kp SV_LBKT      &kp SV_RBKT     &kp SV_QMARK
 &kp LS(F)     &hm LALT LS(A)  &hm LGUI LS(Q)  &hm LCTRL LS(K)  &trans         &trans        &hm LCTRL LS(X)  &hm LCTRL LS(Z)  &hm LALT LS(A)  &kp LS(O)
 &trans        &kp LS(V)       &kp SV_AMPS     &kp SV_DLLR      &trans         &trans        &kp SV_BSLH      &kp SV_AT        &kp SV_SQT      &trans
-                              &trans          &kp PLUS         &kp SV_HASH    &kp SV_GRAVE  &trans           &trans
+                              &trans          &kp PLUS         &kp SV_HASH    &kp SV_GRAVE  &kp SV_COLON     &trans
             >;
         };
 
