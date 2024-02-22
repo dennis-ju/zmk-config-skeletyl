@@ -45,6 +45,15 @@
             #binding-cells = <0>;
             bindings = <&kp SV_UNDER>, <&vim_save_exit>;
         };
+
+        ltr: ltr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTR";
+            bindings = <&mo>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+        };
     };
 
     macros {
@@ -68,10 +77,10 @@
 
         alpha {
             bindings = <
-&kp SV_DOT  &kp W       &kp F       &kp G        &none          &none      &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
-&kp S       &hm LALT C  &hm LGUI N  &hm LCTRL T  &none          &none      &hm LCTRL A          &hm LGUI E                &hm LALT I  &kp H
-&none       &kp P       &kp L       &kp D        &none          &none      &kp U                &kp O                     &kp Y       &none
-                        &none       &lt 1 R      &key_repeat    &sk LSHFT  &lt 4 SPACE          &none
+&kp SV_DOT  &kp W       &kp M       &kp G        &none       &none      &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
+&kp S       &hm LALT C  &hm LGUI N  &hm LCTRL T  &none       &none      &hm LCTRL A          &hm LGUI E                &hm LALT I  &kp H
+&none       &kp P       &kp L       &kp D        &none       &none      &kp U                &kp O                     &kp Y       &none
+                        &none       &lt 1 R      &ltr 3 0    &sk LSHFT  &lt 4 SPACE          &none
             >;
         };
 
