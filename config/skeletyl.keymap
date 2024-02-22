@@ -112,8 +112,8 @@
         sym1 {
             bindings = <
 &kp SV_EXCL  &kp SV_LBRC         &kp SV_RBRC  &kp SV_EQUAL  &trans    &trans      &kp SV_SEMI  &kp SV_LPAR  &kp SV_RPAR           &kp SV_QMARK
-&kp F        &hm LALT SV_A_RING  &hm LGUI Q   &hm LCTRL K   &trans    &trans      &kp X        &hm LGUI Z   &hm LALT SV_A_UMLAUT  &kp SV_O_UMLAUT
-&trans       &kp V               &kp SV_STAR  &kp SV_MINUS  &trans    &trans      &kp SV_FSLH  &kp SV_LT    &kp SV_GT             &trans
+&kp F        &hm LALT SV_A_RING  &hm LGUI Q   &hm LCTRL K   &trans    &trans      &kp V        &hm LGUI Z   &hm LALT SV_A_UMLAUT  &kp SV_O_UMLAUT
+&trans       &kp X               &kp SV_STAR  &kp SV_MINUS  &trans    &trans      &kp SV_FSLH  &kp SV_LT    &kp SV_GT             &trans
                                  &trans       &trans        &trans    &kp SV_DQT  &to_sym2     &trans
             >;
         };
@@ -121,8 +121,8 @@
         sym2 {
             bindings = <
 &kp SV_PRCNT  &kp SV_COLON    &kp SV_CARET    &kp SV_PIPE      &trans         &trans        &tide_macro      &kp SV_LBKT      &kp SV_RBKT     &kp SV_QMARK
-&kp LS(F)     &hm LALT LS(A)  &hm LGUI LS(Q)  &hm LCTRL LS(K)  &trans         &trans        &hm LCTRL LS(X)  &hm LCTRL LS(Z)  &hm LALT LS(A)  &kp LS(O)
-&trans        &kp LS(V)       &kp SV_AMPS     &kp SV_DLLR      &trans         &trans        &kp SV_BSLH      &kp SV_AT        &kp SV_SQT      &trans
+&kp LS(F)     &hm LALT LS(A)  &hm LGUI LS(Q)  &hm LCTRL LS(K)  &trans         &trans        &hm LCTRL LS(V)  &hm LCTRL LS(Z)  &hm LALT LS(A)  &kp LS(O)
+&trans        &kp LS(X)       &kp SV_AMPS     &kp SV_DLLR      &trans         &trans        &kp SV_BSLH      &kp SV_AT        &kp SV_SQT      &trans
                               &trans          &kp PLUS         &kp SV_HASH    &kp SV_GRAVE  &kp SV_COLON     &trans
             >;
         };
@@ -141,7 +141,7 @@
 &trans  &trans           &kp DEL         &kp HOME       &trans    &trans  &trans          &kp BACKSPACE  &trans       &trans
 &trans  &hm LALT TAB     &hm LGUI ENTER  &hm LCTRL ESC  &trans    &trans  &hm LCTRL LEFT  &hm LGUI DOWN  &hm LALT UP  &kp RIGHT
 &trans  &kp LC(LS(TAB))  &kp LC(TAB)     &kp END        &trans    &trans  &trans          &kp PG_DN      &kp PG_UP    &trans
-                         &trans          &kp LGUI       &mo 5     &trans  &trans          &trans
+                         &trans          &kp LGUI       &sl 5     &trans  &trans          &trans
             >;
         };
 
