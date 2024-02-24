@@ -103,7 +103,7 @@
         alpha {
             bindings = <
 &kp SV_DOT  &kp W       &kp M       &kp G        &none       &none      &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
-&kp S       &hm LALT C  &hm LGUI N  &hm LCTRL T  &none       &none      &hm LCTRL A          &hm LGUI E                &hm LALT I  &kp H
+&hm LALT S  &hm LGUI C  &hm LCTRL N &hm LSHIFT T &none       &none      &hm LSHIFT A         &hm LCTRL E               &hm LGUI I  &hm LALT H
 &none       &kp P       &kp L       &kp D        &none       &none      &kp U                &kp O                     &kp Y       &none
                         &none       &lt 1 R      &ltr 3 0    &sk LSHFT  &lt 4 SPACE          &none
             >;
@@ -112,7 +112,7 @@
         sym1 {
             bindings = <
 &kp SV_EXCL  &kp SV_LBRC         &kp SV_RBRC  &kp SV_EQUAL  &trans    &trans      &kp SV_SEMI  &kp SV_LPAR  &kp SV_RPAR           &kp SV_QMARK
-&kp F        &hm LALT SV_A_RING  &hm LGUI Q   &hm LCTRL K   &trans    &trans      &kp V        &hm LGUI Z   &hm LALT SV_A_UMLAUT  &kp SV_O_UMLAUT
+&kp F        &kp SV_A_RING       &kp Q        &kp K         &trans    &trans      &kp V        &kp Z        &kp SV_A_UMLAUT       &kp SV_O_UMLAUT
 &trans       &kp X               &kp SV_STAR  &kp SV_MINUS  &trans    &trans      &kp SV_FSLH  &kp SV_LT    &kp SV_GT             &trans
                                  &trans       &trans        &trans    &kp SV_DQT  &to_sym2     &trans
             >;
@@ -121,7 +121,7 @@
         sym2 {
             bindings = <
 &kp SV_PRCNT  &kp SV_COLON    &kp SV_CARET    &kp SV_PIPE      &trans         &trans        &tide_macro      &kp SV_LBKT      &kp SV_RBKT     &kp SV_QMARK
-&kp LS(F)     &hm LALT LS(A)  &hm LGUI LS(Q)  &hm LCTRL LS(K)  &trans         &trans        &hm LCTRL LS(V)  &hm LCTRL LS(Z)  &hm LALT LS(A)  &kp LS(O)
+&kp LS(F)     &kp LS(A)       &kp LS(Q)       &kp LS(K)        &trans         &trans        &kp LS(V)  &kp LS(Z)  &kp LS(A)  &kp LS(O)
 &trans        &kp LS(X)       &kp SV_AMPS     &kp SV_DLLR      &trans         &trans        &kp SV_BSLH      &kp SV_AT        &kp SV_SQT      &trans
                               &trans          &kp PLUS         &kp SV_HASH    &kp SV_GRAVE  &kp SV_COLON     &trans
             >;
@@ -130,7 +130,7 @@
         num {
             bindings = <
 &trans     &kp BACKSPACE   &kp N5       &kp N6        &trans    &trans     &kp N7        &kp N8       &kp N9       &trans
-&kp LC(A)  &hm LALT LC(Z)  &hm LGUI N0  &hm LCTRL N1  &trans    &trans     &hm LCTRL N2  &hm LGUI N3  &hm LALT N4  &trans
+&kp LC(A)  &kp LC(Z)  &kp N0  &kp N1  &trans    &trans     &kp N2  &kp N3  &kp N4  &trans
 &trans     &kp LC(X)       &kp LC(C)    &kp LC(V)     &trans    &trans     &kp SV_COMMA  &kp SV_DOT   &trans       &trans
                            &trans       &trans        &trans    &kp LSHFT  &kp LGUI      &trans
             >;
@@ -139,7 +139,7 @@
         sys {
             bindings = <
 &trans  &trans           &kp DEL         &kp HOME       &trans    &trans  &trans          &kp BACKSPACE  &trans       &trans
-&trans  &hm LALT TAB     &hm LGUI ENTER  &hm LCTRL ESC  &trans    &trans  &hm LCTRL LEFT  &hm LGUI DOWN  &hm LALT UP  &kp RIGHT
+&trans  &kp TAB     &kp ENTER  &kp ESC  &trans    &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
 &trans  &kp LC(LS(TAB))  &kp LC(TAB)     &kp END        &trans    &trans  &trans          &kp PG_DN      &kp PG_UP    &trans
                          &trans          &kp LGUI       &sl 5     &trans  &trans          &trans
             >;
@@ -148,7 +148,7 @@
         fun {
             bindings = <
 &kp F10  &kp F11      &kp F12      &trans        &trans    &trans      &trans        &trans       &trans       &trans
-&kp F1   &hm LALT F2  &hm LGUI F3  &hm LCTRL F4  &trans    &trans      &hm LCTRL F6  &hm LGUI F7  &hm LALT F8  &kp F9
+&kp F1   &kp F2  &kp F3  &kp F4  &trans    &trans      &kp F6  &kp F7  &kp F8  &kp F9
 &trans   &trans       &trans       &trans        &trans    &trans      &trans        &trans       &trans       &trans
                       &trans       &trans        &trans    &kp LSHIFT  &trans        &trans
             >;
