@@ -43,7 +43,11 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_VIM_SAVE_EXIT";
             #binding-cells = <0>;
-            bindings = <&kp SV_UNDER>, <&vim_save_exit>;
+            bindings =
+                <&kp SV_UNDER>,
+                <&vim_quit>,
+                <&vim_save>,
+                <&vim_save_exit>;
         };
 
         ltr: ltr {
@@ -69,7 +73,7 @@
         vim_save_exit: vim_save_exit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp COLON &kp W &kp Q &kp ENTER>;
+            bindings = <&kp ESCAPE &kp SV_COLON &kp W &kp Q &kp ENTER>;
             label = "VIM_SAVE_EXIT";
             wait-ms = <10>;
             tap-ms = <10>;
@@ -95,6 +99,31 @@
             bindings = <&sl 2>;
             label = "TO_SYM2";
         };
+
+        vim_save: vim_save {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp SV_COLON &kp W &kp ENTER>;
+            label = "VIM_SAVE";
+            wait-ms = <10>;
+            tap-ms = <10>;
+        };
+
+        gave_macro: gave_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SV_GRAVE &kp SPACE>;
+            label = "GAVE_MACRO";
+        };
+
+        vim_quit: vim_quit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp SV_COLON &kp Q &kp ENTER>;
+            label = "VIM_QUIT";
+            wait-ms = <10>;
+            tap-ms = <10>;
+        };
     };
 
     keymap {
@@ -102,8 +131,8 @@
 
         alpha {
             bindings = <
-&kp SV_DOT  &kp W       &kp M        &kp G         &none    &none        &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
-&hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &none    &none        &hm LSHIFT A         &hm LCTRL E               &hm LGUI I  &hm LALT H
+&kp SV_DOT  &kp W       &kp H        &kp G         &none    &none        &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
+&hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &kp M    &none        &hm LSHIFT A         &hm LCTRL E               &hm LGUI I  &hm LALT R
 &none       &kp P       &kp L        &kp D         &none    &none        &kp U                &kp O                     &kp Y       &none
                         &none        &sl 1         &kp R    &key_repeat  &lt 4 SPACE          &none
             >;
