@@ -134,7 +134,7 @@
 &kp SV_DOT  &kp W       &kp H        &kp G         &none    &none        &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
 &hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &kp M    &none        &hm LSHIFT A         &hm LCTRL E               &hm LGUI I  &hm LALT R
 &none       &kp P       &kp L        &kp D         &none    &none        &kp U                &kp O                     &kp Y       &none
-                        &none        &sl 1         &kp R    &key_repeat  &lt 4 SPACE          &none
+                        &none        &sl 1         &sl 3    &key_repeat  &lt 4 SPACE          &none
             >;
         };
 
@@ -152,7 +152,7 @@
 &kp SV_PRCNT  &kp SV_COLON  &kp SV_CARET  &kp SV_PIPE  &trans         &trans        &tide_macro   &kp SV_LBKT  &kp SV_RBKT  &kp SV_QMARK
 &kp LS(F)     &kp LS(A)     &kp LS(Q)     &kp LS(K)    &trans         &trans        &kp LS(V)     &kp LS(Z)    &kp LS(A)    &kp LS(O)
 &trans        &kp LS(X)     &kp SV_AMPS   &kp SV_DLLR  &trans         &trans        &kp SV_BSLH   &kp SV_AT    &kp SV_SQT   &trans
-                            &trans        &kp PLUS     &kp SV_HASH    &kp SV_GRAVE  &kp SV_COLON  &trans
+                            &trans        &kp SV_PLUS  &kp SV_HASH    &kp SV_GRAVE  &kp SV_COLON  &trans
             >;
         };
 
