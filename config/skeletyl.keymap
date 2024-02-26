@@ -124,6 +124,13 @@
             wait-ms = <10>;
             tap-ms = <10>;
         };
+
+        sticky_sym: sticky {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 1>;
+            label = "STICKY";
+        };
     };
 
     keymap {
@@ -131,37 +138,37 @@
 
         alpha {
             bindings = <
-&kp SV_DOT  &kp W       &kp H        &kp G         &none    &none        &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
-&hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &kp M    &none        &hm LSHIFT A         &hm LCTRL E               &hm LGUI I  &hm LALT R
-&none       &kp P       &kp L        &kp D         &none    &none        &kp U                &kp O                     &kp Y       &none
-                        &none        &sl 1         &sl 3    &key_repeat  &lt 4 SPACE          &none
+&kp SV_DOT  &kp W       &kp H        &kp G         &none       &none        &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
+&hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &kp M       &kp K        &hm LSHIFT A         &hm LCTRL E               &hm LGUI I  &hm LALT R
+&none       &kp P       &kp L        &kp D         &none       &none        &kp U                &kp O                     &kp Y       &none
+                        &none        &sticky_sym   &ltr 3 0    &key_repeat  &lt 4 SPACE          &none
             >;
         };
 
         sym1 {
             bindings = <
-&kp SV_EXCL  &kp SV_LBRC    &kp SV_RBRC  &kp SV_EQUAL  &trans    &trans      &kp SV_SEMI  &kp SV_LPAR  &kp SV_RPAR      &kp SV_QMARK
-&kp F        &kp SV_A_RING  &kp Q        &kp K         &trans    &trans      &kp V        &kp Z        &kp SV_A_UMLAUT  &kp SV_O_UMLAUT
-&trans       &kp X          &kp SV_STAR  &kp SV_MINUS  &trans    &trans      &kp SV_FSLH  &kp SV_LT    &kp SV_GT        &trans
-                            &trans       &trans        &trans    &kp SV_DQT  &to_sym2     &trans
+&kp SV_EQUAL  &kp SV_LBRC    &kp SV_RBRC  &kp SV_EXCL   &trans       &trans     &kp SV_COLON  &kp SV_LPAR  &kp SV_RPAR      &kp SV_QMARK
+&kp F         &kp SV_A_RING  &kp Q        &kp SV_SEMI   &kp SV_LT    &kp SV_GT  &kp V         &kp Z        &kp SV_A_UMLAUT  &kp SV_O_UMLAUT
+&trans        &kp X          &kp SV_STAR  &kp SV_MINUS  &trans       &trans     &kp SV_FSLH   &kp SV_SQT   &kp SV_DQT       &trans
+                             &trans       &kp SV_QMARK  &trans       &none      &to_sym2      &trans
             >;
         };
 
         sym2 {
             bindings = <
-&kp SV_PRCNT  &kp SV_COLON  &kp SV_CARET  &kp SV_PIPE  &trans         &trans        &tide_macro   &kp SV_LBKT  &kp SV_RBKT  &kp SV_QMARK
-&kp LS(F)     &kp LS(A)     &kp LS(Q)     &kp LS(K)    &trans         &trans        &kp LS(V)     &kp LS(Z)    &kp LS(A)    &kp LS(O)
-&trans        &kp LS(X)     &kp SV_AMPS   &kp SV_DLLR  &trans         &trans        &kp SV_BSLH   &kp SV_AT    &kp SV_SQT   &trans
-                            &trans        &kp SV_PLUS  &kp SV_HASH    &kp SV_GRAVE  &kp SV_COLON  &trans
+&kp SV_PRCNT  &kp SV_COLON  &kp SV_CARET  &kp SV_PIPE  &trans         &trans       &tide_macro  &kp SV_LBKT  &kp SV_RBKT  &kp SV_QMARK
+&kp LS(F)     &kp LS(A)     &kp LS(Q)     &kp LS(K)    &kp SV_PLUS    &kp SV_HASH  &kp LS(V)    &kp LS(Z)    &kp LS(A)    &kp LS(O)
+&trans        &kp LS(X)     &kp SV_AMPS   &kp SV_DLLR  &trans         &trans       &kp SV_BSLH  &kp SV_AT    &gave_macro  &trans
+                            &trans        &none        &none          &none        &none        &trans
             >;
         };
 
         num {
             bindings = <
-&trans     &kp BACKSPACE  &kp N5     &kp N6     &trans    &trans     &kp N7        &kp N8      &kp N9  &trans
-&kp LC(A)  &kp LC(Z)      &kp N0     &kp N1     &trans    &trans     &kp N2        &kp N3      &kp N4  &trans
-&trans     &kp LC(X)      &kp LC(C)  &kp LC(V)  &trans    &trans     &kp SV_COMMA  &kp SV_DOT  &trans  &trans
-                          &trans     &trans     &trans    &kp LSHFT  &kp LGUI      &trans
+&trans     &kp BACKSPACE  &kp N5     &kp N6     &trans    &trans  &kp N7        &kp N8      &kp N9  &trans
+&kp LC(A)  &kp LC(Z)      &kp N0     &kp N1     &trans    &trans  &kp N2        &kp N3      &kp N4  &trans
+&trans     &kp LC(X)      &kp LC(C)  &kp LC(V)  &trans    &trans  &kp SV_COMMA  &kp SV_DOT  &trans  &trans
+                          &trans     &trans     &trans    &none   &none         &trans
             >;
         };
 
@@ -180,6 +187,15 @@
 &kp F1   &kp F2   &kp F3   &kp F4  &trans    &trans      &kp F6  &kp F7  &kp F8  &kp F9
 &trans   &trans   &trans   &trans  &trans    &trans      &trans  &trans  &trans  &trans
                   &trans   &trans  &trans    &kp LSHIFT  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
