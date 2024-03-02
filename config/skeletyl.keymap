@@ -43,11 +43,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_VIM_SAVE_EXIT";
             #binding-cells = <0>;
-            bindings =
-                <&kp SV_UNDER>,
-                <&vim_quit>,
-                <&vim_save>,
-                <&vim_save_exit>;
+            bindings = <&kp O>, <&vim_quit>, <&vim_save>, <&vim_save_exit>;
         };
 
         ltr: ltr {
@@ -136,66 +132,84 @@
     keymap {
         compatible = "zmk,keymap";
 
-        alpha {
+        alpha1 {
             bindings = <
-&kp SV_DOT  &kp W       &kp H        &kp G         &none       &none     &tap_dance_capsword  &tap_dance_vim_save_exit  &kp J       &kp B
-&hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &kp M       &kp K     &hm LSHIFT A         &hm LCTRL E               &hm LGUI I  &hm LALT R
-&none       &kp P       &kp L        &kp D         &none       &none     &kp U                &kp O                     &kp Y       &none
-                        &none        &sticky_sym   &ltr 3 0    &ltr 6 0  &lt 4 SPACE          &none
+&kp SV_DOT  &kp W       &kp H        &kp G         &none       &none     &tap_dance_capsword  &kp SV_UNDER              &kp J       &kp B
+&hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &kp M       &none     &hm LSHIFT A         &hm LCTRL E               &hm LGUI I  &hm LALT R
+&none       &kp P       &kp L        &lt 3 D       &none       &none     &lt 4 U              &tap_dance_vim_save_exit  &kp Y       &none
+                        &none        &sticky_sym   &ltr 5 0    &ltr 8 0  &lt 6 SPACE          &none
             >;
         };
 
-        sym1 {
+        alpha2 {
             bindings = <
-&kp SV_EQUAL  &kp SV_LBRC    &kp SV_RBRC  &kp SV_EXCL   &trans       &trans     &kp SV_COLON  &kp SV_LPAR  &kp SV_RPAR      &kp SV_QMARK
-&kp F         &kp SV_A_RING  &kp Q        &kp SV_SEMI   &kp SV_LT    &kp SV_GT  &kp V         &kp Z        &kp SV_A_UMLAUT  &kp SV_O_UMLAUT
-&trans        &kp X          &kp SV_STAR  &kp SV_MINUS  &trans       &trans     &kp SV_FSLH   &kp SV_SQT   &kp SV_DQT       &trans
-                             &trans       &kp SV_QMARK  &trans       &none      &to_sym2      &trans
+&gave_macro  &kp SV_AMPS    &kp SV_PIPE   &kp SV_EXCL       &none          &none  &kp SV_QUESTION  &kp SV_EQUAL  &kp SV_HASH      &kp SV_BACKSLASH
+&kp F        &kp SV_A_RING  &kp Q         &kp K             &tide_macro    &none  &kp V            &kp Z         &kp SV_A_UMLAUT  &kp SV_O_UMLAUT
+&none        &kp X          &kp SV_COLON  &kp SV_MINUS      &none          &none  &kp SV_FSLH      &kp SV_SQT    &kp SV_DQT       &none
+                            &none         &kp SV_SEMICOLON  &none          &none  &to_sym2         &none
             >;
         };
 
-        sym2 {
+        alpha2_caps {
             bindings = <
-&kp SV_PRCNT  &kp SV_COLON  &kp SV_CARET  &kp SV_PIPE  &trans         &trans       &tide_macro  &kp SV_LBKT  &kp SV_RBKT  &kp SV_QMARK
-&kp LS(F)     &kp LS(A)     &kp LS(Q)     &kp LS(K)    &kp SV_PLUS    &kp SV_HASH  &kp LS(V)    &kp LS(Z)    &kp LS(A)    &kp LS(O)
-&trans        &kp LS(X)     &kp SV_AMPS   &kp SV_DLLR  &trans         &trans       &kp SV_BSLH  &kp SV_AT    &gave_macro  &trans
-                            &trans        &none        &none          &none        &none        &trans
+&none      &none      &none      &none      &none    &none  &none      &none      &none      &none
+&kp LS(F)  &kp LS(A)  &kp LS(Q)  &kp LS(K)  &none    &none  &kp LS(V)  &kp LS(Z)  &kp LS(A)  &kp LS(O)
+&none      &kp LS(X)  &none      &none      &none    &none  &none      &none      &none      &none
+                      &none      &none      &none    &none  &none      &none
+            >;
+        };
+
+        sym_r {
+            bindings = <
+&none  &none  &none  &none  &none    &none  &kp SV_DOLLAR  &none        &kp SV_SEMI  &kp SV_HASH
+&none  &none  &none  &none  &none    &none  &kp SV_LPAR    &kp SV_RPAR  &kp SV_LBKT  &kp SV_RBKT
+&none  &none  &none  &none  &none    &none  &kp SV_AT      &kp SV_SQT   &kp SV_DQT   &none
+              &none  &none  &none    &none  &none          &none
+            >;
+        };
+
+        sym_l {
+            bindings = <
+&none      &kp SV_PLUS  &kp SV_STAR  &kp SV_CARET    &none          &none  &none  &none  &none  &none
+&kp SV_LT  &kp SV_GT    &kp SV_LBRC  &kp SV_RBRC     &kp SV_SEMI    &none  &none  &none  &none  &none
+&none      &none        &none        &kp SV_PERCENT  &none          &none  &none  &none  &none  &none
+                        &none        &none           &none          &none  &none  &none
             >;
         };
 
         num {
             bindings = <
-&trans     &kp BACKSPACE  &kp N5     &kp N6     &trans    &trans  &kp N7        &kp N8      &kp N9  &trans
-&kp LC(A)  &kp LC(Z)      &kp N0     &kp N1     &trans    &trans  &kp N2        &kp N3      &kp N4  &trans
-&trans     &kp LC(X)      &kp LC(C)  &kp LC(V)  &trans    &trans  &kp SV_COMMA  &kp SV_DOT  &trans  &trans
-                          &trans     &trans     &trans    &none   &none         &trans
+&none      &kp BACKSPACE  &kp N5     &kp N6     &none    &none  &kp N7        &kp N8      &kp N9  &none
+&kp LC(A)  &kp LC(Z)      &kp N0     &kp N1     &none    &none  &kp N2        &kp N3      &kp N4  &none
+&none      &kp LC(X)      &kp LC(C)  &kp LC(V)  &none    &none  &kp SV_COMMA  &kp SV_DOT  &none   &none
+                          &none      &none      &none    &none  &none         &none
             >;
         };
 
         sys {
             bindings = <
-&trans  &trans           &kp DEL      &kp HOME  &trans    &trans  &trans    &kp BACKSPACE  &trans     &trans
-&trans  &kp TAB          &kp ENTER    &kp ESC   &trans    &trans  &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT
-&trans  &kp LC(LS(TAB))  &kp LC(TAB)  &kp END   &trans    &trans  &trans    &kp PG_DN      &kp PG_UP  &trans
-                         &trans       &kp LGUI  &sl 5     &trans  &trans    &trans
+&none  &none            &kp DEL      &kp HOME  &none       &none  &none     &kp BACKSPACE  &none      &none
+&none  &kp TAB          &kp ENTER    &kp ESC   &none       &none  &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT
+&none  &kp LC(LS(TAB))  &kp LC(TAB)  &kp END   &none       &none  &sl 7     &kp PG_DN      &kp PG_UP  &none
+                        &none        &kp LGUI  &kp LALT    &none  &none     &none
             >;
         };
 
         fun {
             bindings = <
-&kp F11  &kp F12  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans
-&kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6      &kp F7  &kp F8  &kp F9  &kp F10
-&trans   &trans   &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &kp LSHIFT  &trans  &trans
+&kp F10  &kp F11  &kp F12  &none   &none     &none  &none   &none   &none   &none
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5    &none  &kp F6  &kp F7  &kp F8  &kp F9
+&none    &none    &none    &none   &none     &none  &none   &none   &none   &none
+                  &none    &none   &none     &none  &none   &none
             >;
         };
 
         wnav {
             bindings = <
-&trans      &trans      &trans      &trans      &trans        &trans      &trans      &trans      &trans      &trans
-&kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)    &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N0)
-&trans      &trans      &trans      &trans      &trans        &trans      &trans      &trans      &trans      &trans
-                        &trans      &kp LSHFT   &trans        &trans      &trans      &trans
+&none       &none       &kp ENTER     &kp R          &none         &none  &none         &kp W       &none       &none
+&kp LG(N1)  &kp LG(N2)  &kp LG(N3)    &kp LG(N4)     &kp LG(N5)    &none  &kp LG(N6)    &kp LG(N7)  &kp LG(N8)  &kp LG(N9)
+&none       &none       &kp LG(LEFT)  &kp LG(RIGHT)  &none         &none  &kp LG(DOWN)  &kp LG(UP)  &none       &none
+                        &none         &kp LSHFT      &none         &none  &none         &none
             >;
         };
     };
