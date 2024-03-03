@@ -43,7 +43,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_VIM_SAVE_EXIT";
             #binding-cells = <0>;
-            bindings = <&kp O>, <&vim_quit>, <&vim_save>, <&vim_save_exit>;
+            bindings = <&kp H>, <&vim_quit>, <&vim_save>, <&vim_save_exit>;
         };
 
         ltr: ltr {
@@ -134,10 +134,10 @@
 
         alpha1 {
             bindings = <
-&kp SV_DOT  &kp W       &kp H        &kp G         &none       &none     &tap_dance_capsword  &kp SV_UNDER              &kp J       &kp B
-&hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &kp M       &none     &hm LSHIFT A         &hm LCTRL E               &hm LGUI I  &hm LALT R
-&none       &kp P       &kp L        &lt 3 D       &none       &none     &lt 4 U              &tap_dance_vim_save_exit  &kp Y       &none
-                        &none        &sticky_sym   &ltr 5 0    &ltr 8 0  &lt 6 SPACE          &none
+&kp SV_DOT  &kp W       &tap_dance_vim_save_exit  &kp G         &none       &none     &tap_dance_capsword  &kp SV_UNDER  &kp J       &kp B
+&hm LALT S  &hm LGUI C  &hm LCTRL N               &hm LSHIFT T  &kp M       &none     &hm LSHIFT A         &hm LCTRL E   &hm LGUI I  &hm LALT R
+&none       &kp P       &kp L                     &lt 3 D       &none       &none     &lt 4 U              &kp O         &kp Y       &none
+                        &none                     &sticky_sym   &ltr 5 0    &ltr 8 0  &lt 6 SPACE          &none
             >;
         };
 
