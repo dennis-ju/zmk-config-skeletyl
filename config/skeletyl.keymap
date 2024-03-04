@@ -129,7 +129,7 @@
         alpha1 {
             bindings = <
 &kp SV_DOT  &kp W       &kp H        &kp G         &none       &none     &tap_dance_capsword  &kp SV_UNDER  &kp J       &kp B
-&hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &kp M       &none     &hm LSHIFT A         &hm LCTRL E   &hm LGUI I  &hm LALT R
+&hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &none       &none     &hm LSHIFT A         &hm LCTRL E   &hm LGUI I  &hm LALT R
 &none       &kp P       &kp L        &lt 3 D       &none       &none     &lt 4 U              &kp O         &kp Y       &none
                         &none        &sticky_sym   &ltr 5 0    &ltr 8 0  &lt 6 SPACE          &none
             >;
@@ -137,18 +137,18 @@
 
         alpha2 {
             bindings = <
-&gave_macro  &kp SV_AMPS    &kp SV_PIPE   &kp SV_EXCL       &none          &none  &kp SV_QUESTION  &kp SV_EQUAL  &kp SV_HASH      &kp SV_BACKSLASH
-&kp F        &kp SV_A_RING  &kp Q         &kp K             &tide_macro    &none  &kp V            &kp Z         &kp SV_A_UMLAUT  &kp SV_O_UMLAUT
-&none        &kp X          &kp SV_COLON  &kp SV_MINUS      &none          &none  &kp SV_FSLH      &kp SV_SQT    &kp SV_DQT       &none
-                            &none         &kp SV_SEMICOLON  &none          &none  &to_sym2         &none
+&kp SV_PIPE  &kp SV_AMPS    &kp Z         &kp SV_EXCL       &none    &none  &kp SV_QUESTION  &kp SV_EQUAL  &kp SV_HASH      &kp SV_BACKSLASH
+&kp F        &kp SV_A_RING  &kp M         &kp K             &none    &none  &kp V            &kp Q         &kp SV_A_UMLAUT  &kp SV_O_UMLAUT
+&none        &kp X          &kp SV_COLON  &kp SV_MINUS      &none    &none  &kp SV_FSLH      &kp SV_SQT    &kp SV_DQT       &none
+                            &none         &kp SV_SEMICOLON  &none    &none  &to_sym2         &none
             >;
         };
 
         alpha2_caps {
             bindings = <
-&none      &none      &none      &none      &none    &none  &none      &none      &none      &none
-&kp LS(F)  &kp LS(A)  &kp LS(Q)  &kp LS(K)  &none    &none  &kp LS(V)  &kp LS(Z)  &kp LS(A)  &kp LS(O)
-&none      &kp LS(X)  &none      &none      &none    &none  &none      &none      &none      &none
+&none      &none      &kp LS(Z)  &none      &none    &none  &none      &none        &none      &none
+&kp LS(F)  &kp LS(A)  &kp LS(M)  &kp LS(K)  &none    &none  &kp LS(V)  &kp LS(Q)    &kp LS(A)  &kp LS(O)
+&none      &kp LS(X)  &none      &none      &none    &none  &none      &gave_macro  &none      &none
                       &none      &none      &none    &none  &none      &none
             >;
         };
@@ -164,10 +164,10 @@
 
         sym_l {
             bindings = <
-&none      &kp SV_PLUS  &kp SV_STAR  &kp SV_CARET    &none          &none  &none  &none  &none  &none
-&kp SV_LT  &kp SV_GT    &kp SV_LBRC  &kp SV_RBRC     &kp SV_SEMI    &none  &none  &none  &none  &none
-&none      &none        &none        &kp SV_PERCENT  &none          &none  &none  &none  &none  &none
-                        &none        &none           &none          &none  &none  &none
+&none      &kp SV_PLUS  &kp SV_STAR  &kp SV_CARET    &none    &none  &none  &none  &none  &none
+&kp SV_LT  &kp SV_GT    &kp SV_LBRC  &kp SV_RBRC     &none    &none  &none  &none  &none  &none
+&none      &none        &kp SV_SEMI  &kp SV_PERCENT  &none    &none  &none  &none  &none  &none
+                        &none        &none           &none    &none  &none  &none
             >;
         };
 
@@ -191,19 +191,19 @@
 
         fun {
             bindings = <
-&kp F10  &kp F11  &kp F12  &none   &none     &none  &none   &none   &none   &none
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5    &none  &kp F6  &kp F7  &kp F8  &kp F9
-&none    &none    &none    &none   &none     &none  &none   &none   &none   &none
-                  &none    &none   &none     &none  &none   &none
+&kp F9  &kp F10  &kp F11  &kp F12  &none    &none  &none   &none   &none   &none
+&kp F1  &kp F2   &kp F3   &kp F4   &none    &none  &kp F5  &kp F6  &kp F7  &kp F8
+&none   &none    &none    &none    &none    &none  &none   &none   &none   &none
+                 &none    &none    &none    &none  &none   &none
             >;
         };
 
         wnav {
             bindings = <
-&none       &none       &kp ENTER     &kp R          &none         &none  &none         &kp W       &none       &none
-&kp LG(N1)  &kp LG(N2)  &kp LG(N3)    &kp LG(N4)     &kp LG(N5)    &none  &kp LG(N6)    &kp LG(N7)  &kp LG(N8)  &kp LG(N9)
-&none       &none       &kp LG(LEFT)  &kp LG(RIGHT)  &none         &none  &kp LG(DOWN)  &kp LG(UP)  &none       &none
-                        &none         &kp LSHFT      &none         &none  &none         &none
+&none       &none       &kp ENTER     &kp R          &none    &none  &none         &kp W       &none       &none
+&kp LG(N1)  &kp LG(N2)  &kp LG(N3)    &kp LG(N4)     &none    &none  &kp LG(N5)    &kp LG(N6)  &kp LG(N7)  &kp LG(N8)
+&none       &none       &kp LG(LEFT)  &kp LG(RIGHT)  &none    &none  &kp LG(DOWN)  &kp LG(UP)  &none       &none
+                        &none         &kp LSHFT      &none    &none  &none         &none
             >;
         };
     };
