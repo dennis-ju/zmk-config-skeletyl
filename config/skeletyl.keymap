@@ -131,7 +131,7 @@
 &kp SV_DOT  &kp W       &kp H        &kp G         &none       &none     &tap_dance_capsword  &kp SV_UNDER  &kp J       &kp B
 &hm LALT S  &hm LGUI C  &hm LCTRL N  &hm LSHIFT T  &none       &none     &hm LSHIFT A         &hm LCTRL E   &hm LGUI I  &hm LALT R
 &none       &kp P       &kp L        &lt 3 D       &none       &none     &lt 4 U              &kp O         &kp Y       &none
-                        &none        &sticky_sym   &ltr 5 0    &ltr 8 0  &lt 6 SPACE          &none
+                        &none        &sticky_sym   &ltr 5 0    &ltr 8 0  &htm 6 SPACE         &none
             >;
         };
 
