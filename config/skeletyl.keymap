@@ -52,7 +52,7 @@
         htm: htm {
             compatible = "zmk,behavior-hold-tap";
             label = "HTM";
-            bindings = <&to>, <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
