@@ -128,19 +128,19 @@
 
         alpha1 {
             bindings = <
-&kp SV_B       &kp SV_L       &kp SV_D        &kp SV_C         &kp SV_V    &kp SV_J  &kp SV_F         &kp SV_O              &kp SV_U       &kp SV_COMMA
-&hm LALT SV_N  &hm LGUI SV_R  &hm LCTRL SV_T  &hm LSHIFT SV_S  &kp SV_G    &kp SV_Y  &hm LSHIFT SV_H  &hm LCTRL SV_A        &hm LGUI SV_E  &hm LALT SV_I
-&kp SV_X       &kp SV_Q       &kp SV_M        &lt 3 SV_W       &kp SV_Z    &kp SV_K  &lt 4 SV_P       &kp SV_DOUBLE_QUOTES  &kp SV_SEMI    &kp SV_DOT
+&kp SV_B       &kp SV_L       &kp SV_D        &kp SV_C         &kp SV_V    &kp SV_J  &kp SV_F         &kp SV_O        &kp SV_U       &kp SV_COMMA
+&hm LALT SV_N  &hm LGUI SV_R  &hm LCTRL SV_T  &hm LSHIFT SV_S  &kp SV_G    &kp SV_Y  &hm LSHIFT SV_H  &hm LCTRL SV_A  &hm LGUI SV_E  &hm LALT SV_I
+&kp SV_X       &kp SV_Q       &kp SV_M        &lt 3 SV_W       &kp SV_Z    &kp SV_K  &lt 4 SV_P       &kp SV_UNDER    &kp SV_COMMA   &kp SV_DOT
                               &none           &sticky_sym      &ltr 5 0    &ltr 8 0  &htm 6 SPACE     &none
             >;
         };
 
         alpha2 {
             bindings = <
-&kp SV_PIPE   &kp SV_AMPS    &kp Z         &kp SV_EXCL       &none    &none  &kp SV_QUESTION  &kp SV_EQUAL  &kp SV_HASH      &kp SV_BACKSLASH
-&kp SV_TILDE  &kp SV_A_RING  &kp M         &kp K             &none    &none  &kp V            &kp SV_UNDER  &kp SV_A_UMLAUT  &kp SV_O_UMLAUT
-&none         &kp X          &kp SV_COLON  &kp SV_MINUS      &none    &none  &kp SV_FSLH      &kp SV_SQT    &kp SV_DQT       &kp SV_GRAVE
-                             &none         &kp SV_SEMICOLON  &none    &none  &to_sym2         &none
+&kp SV_PIPE  &kp SV_AMPS    &kp Z         &kp SV_EXCL       &none    &none  &kp SV_QUESTION  &kp SV_EQUAL          &kp SV_HASH          &kp SV_BACKSLASH
+&tide_macro  &kp SV_A_RING  &kp M         &kp K             &none    &none  &kp V            &kp SV_SEMI           &kp SV_A_UMLAUT      &kp SV_O_UMLAUT
+&none        &kp X          &kp SV_COLON  &kp SV_MINUS      &none    &none  &kp SV_FSLH      &kp SV_DOUBLE_QUOTES  &kp SV_SINGLE_QUOTE  &gave_macro
+                            &none         &kp SV_SEMICOLON  &none    &none  &to_sym2         &none
             >;
         };
 
